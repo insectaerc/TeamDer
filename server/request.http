@@ -1,0 +1,43 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "studentId": "aaa",
+    "password": "aaa"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "studentId": "jim",
+    "password": "jim"
+}
+###
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzMzFmYTYxNDM1MTA3MTBmZGZmYzgiLCJpYXQiOjE2MjAyNTkzMzl9.Q0mGCFykBVEnV3UteRmyCQ20OgiNGZ2NforzqjLg2Vs
+
+{
+    "postTitle": "wp",
+    "description": "html css react"
+}
+
+
+###
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzMzE3NTYxNDM1MTA3MTBmZGZmYzUiLCJpYXQiOjE2MjAyNTk0NzR9.FAtakMDG12DkCgjS2aot5J56uIJ4ik1L3MJkJaXIUZo
+
+###
+PUT http://localhost:5000/api/post/609331af6143510710fdffc6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzMzE3NTYxNDM1MTA3MTBmZGZmYzUiLCJpYXQiOjE2MjAyNjA4OTF9.SBeV1yDMcmVmDadchPHIEY31mJNGpzJ4M-FlpsG7vrA
+
+{
+    "postTitle": "cung xay nha",
+    "description": "haha"
+}
+
+###
+DELETE http://localhost:5000/api/post/609331af6143510710fdffc6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDkzMzE3NTYxNDM1MTA3MTBmZGZmYzUiLCJpYXQiOjE2MjAyNjA4OTF9.SBeV1yDMcmVmDadchPHIEY31mJNGpzJ4M-FlpsG7vrA
